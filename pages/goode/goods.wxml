@@ -1,0 +1,4 @@
+<!--pages/goode/goods.wxml-->
+<view id="box">
+    <text class="godertext">{{goder}}</text>
+</view>

@@ -1,0 +1,29 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/goode/goods"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#000",
+        "navigationBarTitleText": "功德无量",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#fff",
+        "backgroundColor": "#000",
+        "list": [{
+            "pagePath": "pages/index/index",
+            "text": "敲",
+            "iconPath": "images/icons/woodenFish_light.png",
+            "selectedIconPath": "images/icons/woodenFish.png"
+        },{
+            "pagePath": "pages/goode/goods",
+            "text": "功德",
+            "iconPath": "images/icons/lotus_light.png",
+            "selectedIconPath": "images/icons/lotus.png"
+        }]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}
