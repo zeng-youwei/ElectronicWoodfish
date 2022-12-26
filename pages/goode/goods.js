@@ -6,9 +6,9 @@ Page({
      */
     data: {
         goodsList: [{
-            name: "佛祖笑",
+            name: "放生矿泉水",
             goderNum: 1,
-            img: ""
+            img: "../../images/fangshen/780.webp"
         }],
         goder: 0
     },

@@ -1,4 +1,7 @@
 <!--pages/goode/goods.wxml-->
 <view id="box">
-    <text class="godertext">{{goder}}</text>
+    <text class="godertext">功德点{{goder}}</text>
+    <view wx:for="{{goodsList}}" wx:key="index">
+        <good item="{{item}}"></good>
+    </view>
 </view>

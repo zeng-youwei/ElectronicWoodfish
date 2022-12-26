@@ -1,0 +1,9 @@
+<view class="goodTab" bindtap="consume">
+    <image src="{{item.img}}" webp="{{true}}" mode="aspectFit"></image>
+    <view>
+        {{item.name}}
+    </view>
+    <view>
+        消耗功德点{{item.goderNum}}
+    </view>
+</view>

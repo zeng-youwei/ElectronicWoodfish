@@ -1,0 +1,6 @@
+/* components/good/good.wxss */
+.goodTab{
+    width: 50%;
+    height: 50rpx;
+    color: wheat;
+}

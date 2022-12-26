@@ -3,5 +3,18 @@
     "projectname": "%E7%94%B5%E5%AD%90%E6%9C%A8%E9%B1%BC",
     "setting": {
         "compileHotReLoad": true
+    },
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+                    "pathName": "pages/goode/goods",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
     }
 }
