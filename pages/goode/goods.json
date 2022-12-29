@@ -1,5 +1,6 @@
 {
     "usingComponents": {
-        "good":"/components/good/good"
+        "good":"/components/good/good",
+        "mp-tabs": "@miniprogram-component-plus/tabs"
     }
 }

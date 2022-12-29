@@ -1,5 +1,12 @@
 // pages/index/index.js
 const util = require('../../utils/util.js')
+
+import {
+    createStoreBindings
+} from 'mobx-miniprogram-bindings'
+import {
+    store
+} from '../../store/store'
 Page({
 
     /**
@@ -10,12 +17,7 @@ Page({
         goderList: []
     },
     change: util.throttle(function () {
-        // 播放音乐
-        const innerAudioContext = wx.createInnerAudioContext({
-            useWebAudioImplement: true
-        })
-        innerAudioContext.src = "https://636c-cloud1-8giq8p4f3c24d19a-1316192639.tcb.qcloud.la/muyu.mp3?sign=e763412749aa21be9727e4efe7514b2f&t=1671762492"
-        innerAudioContext.play()
+        util.playAudio(this.data.muyuSrc)
         // 木鱼动画
         this.animate('#muyu', [{
                 scale: [0.9, 0.9]
@@ -68,23 +70,18 @@ Page({
             })
         }.bind(this))
 
-        this.setData({
-            goder: this.data.goder + 1
-        })
-        wx.setStorageSync('goder', this.data.goder)
+        this.updateGoder(1)
     }, 155),
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        if (wx.getStorageSync("goder")) {
-            this.setData({
-                goder: wx.getStorageSync("goder")
-            })
-        } else {
-            wx.setStorageSync("goder", 0)
-        }
+        this.storeBindings = createStoreBindings(this, {
+            store,
+            fields: ['goder','muyuSrc'],
+            actions: ['updateGoder']
+        })
     },
 
     /**
@@ -112,7 +109,7 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload() {
-
+        this.storeBindings.detroyStoreBindings()
     },
 
     /**

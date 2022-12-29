@@ -1,19 +1,35 @@
 /* pages/goode/goods.wxss */
 page {
-    height: 100%
+    background: #000;
 }
 
 #box {
     width: 100%;
-    height: 100%;
     background: #000;
     display: flex;
     flex-direction: column;
 }
 
-.godertext{
+.godertext {
     color: #ffffff;
     font-size: large;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+.goodsList {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tabStyle {
+    width: 375rpx;
+    text-align: center;
+    font-size: large;
+}
+
+.weui-tabs-swiper{
+    height: 2000rpx;
 }

@@ -1,6 +1,12 @@
 /* components/good/good.wxss */
 .goodTab{
-    width: 50%;
-    height: 50rpx;
+    width: 350rpx;
     color: wheat;
+    display: flex;
+    justify-content: center;
+    flex-direction:column
+}
+
+.goodTab image {
+    width: 100%;
 }

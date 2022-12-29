@@ -1,7 +1,16 @@
 <!--pages/goode/goods.wxml-->
-<view id="box">
-    <text class="godertext">功德点{{goder}}</text>
-    <view wx:for="{{goodsList}}" wx:key="index">
-        <good item="{{item}}"></good>
-    </view>
-</view>
+<text class="godertext">功德点{{goder}}</text>
+<mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabClick" bindchange="onChange" activeClass="tab-bar-title__selected" tab-class='tabStyle'>
+    <block wx:for="{{tabs}}" wx:key="title">
+        <view class="tab-content" slot="tab-content-{{index}}">
+            <view id="box">
+                <view class="goodsList">
+                    <view wx:for="{{item.goodsList}}" wx:key="index">
+                        <good item="{{item}}"></good>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </block>
+</mp-tabs>

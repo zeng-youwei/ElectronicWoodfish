@@ -1,5 +1,6 @@
+
 <view id="box">
-    <image src="../../images/muyu.jpg" mode="aspectFill" id="muyu" style="width: 500rpx;" bindtap="change" />
+    <image src="../../images/muyu.jpg" mode="aspectFill" id="muyu" style="width: 600rpx;" bindtap="change" />
 
     <view wx:for="{{goderList}}" class="goder-add" id="{{item}}" wx:key="item">
         功德 +1
